@@ -92,9 +92,7 @@ RUN sed -ri 's/PermitRootLogin without-password/PermitRootLogin yes/g' /etc/ssh/
 
 # Set root password 
 # password hash generated using this command: openssl passwd -1 -salt xampp root 
-#RUN sed -ri 's/root\:\*/root\:\$1\$xampp\$5\/7SXMYAMmS68bAy94B5f\./g' /etc/shadow
-# password: passw0rdt00r
-RUN sed -ri 's/root\:\*/root\:\$1\$xampp\$3zdDfqh\/GurztSQ8DfJcy\//g' /etc/shadow
+RUN sed -ri 's/root\:\*/root\:\$1\$xampp\$5\/7SXMYAMmS68bAy94B5f\./g' /etc/shadow
 
 # Few handy utilities which are nice to have 
 #RUN apt-get -y install nano vim less --no-install-recommends
