@@ -1,4 +1,4 @@
-#编译Docker镜像:
+﻿#编译Docker镜像:
 ```
  docker build --force-rm -t wdmsyf/xampp .
 ```
@@ -92,6 +92,3 @@ phpMyAdmin的配置文件名为config.inc.php，各版本的config.inc.php修改
  - 2.6以前版本：将config.inc.sample.php改为 config.inc.php
  - 2.7版本：将config.default.php改为config.inc.php
  - 2.8版本：用配置脚本 ‘/script/setup.php’生成配置文件，生成的文件拷贝下来，手动存为config.inc.php
-
-
-  [1]: https://github.com/dockerfile/mariadb/issues/3
