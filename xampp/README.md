@@ -1,4 +1,5 @@
-﻿#编译Docker镜像:
+
+#编译Docker镜像:
 ```
  docker build --force-rm -t wdmsyf/xampp .
 ```
@@ -18,7 +19,6 @@ www存储在宿主机
 docker run --name xampp_my -p 4022:22 -p 4080-4089:80-89 -d -v ~/my_htdocs:/www wdmsyf/xampp
 ```
 其中：
-
  - xampp_my是容器名称 4022是映射到宿主机的SSH端口，在外部可以通过 ssh <宿主机地址> -p 4022   
    登录到xampp_my容器
  - 4080-4089:80-89是容器中80到89端口映射到4080到4089，一个容器最多可以承载10个web应用
@@ -82,13 +82,11 @@ $ source ~/.bashrc
 
 3、如何配置phpmyadmin的登录策略；
 答：未经配置的phpMyAdmin很不安全，容易受到攻击，或者根本无法正常使用，phpMyAdmin有3种授权模式：
-
  - cookie: 显示一个web登录页面，输入mysql的用户名和密码，然后进入管理界面
  - http: 显示1个windows登录框，输入mysql的用户名和密码，然和进入管理
  - config: 把mysql用户名和密码直接填入config.inc.php，不显示登录界面，直接进入管理界面
 
 phpMyAdmin的配置文件名为config.inc.php，各版本的config.inc.php修改方法如下：
-
  - 2.6以前版本：将config.inc.sample.php改为 config.inc.php
  - 2.7版本：将config.default.php改为config.inc.php
  - 2.8版本：用配置脚本 ‘/script/setup.php’生成配置文件，生成的文件拷贝下来，手动存为config.inc.php
